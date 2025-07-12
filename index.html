@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foodie POS</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />-->
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Foodie POS</h1>
+      <ul class="nav-links">
+        <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+        <li><a href="#order"><i class="fas fa-shopping-cart"></i> Order</a></li>
+        <li><a href="#orders"><i class="fas fa-list"></i> Orders</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <h2>Manage Orders. Serve Better.</h2>
+      <p>Foodie POS helps streamline your restaurant workflow effortlessly.</p>
+      <a href="#menu" class="btn btn-primary">View Menu</a>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Menu</h2>
+      <div class="menu-grid">
+        <button class="carousel-btn prev">❮</button>
+        <div class="carousel"></div>
+        <button class="carousel-btn next">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order" class="section light">
+    <div class="container">
+      <h2 class="section-title">Place an Order</h2>
+      <form class="order-form">
+        <div class="form-group">
+          <label for="customerName">Customer Name</label>
+          <input type="text" id="customerName" name="customerName" placeholder="Enter customer name" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="tableNumber">Table Number</label>
+          <input type="number" id="tableNumber" name="tableNumber" placeholder="Enter table number" required />
+        </div>
+        
+        <div class="form-group">
+          <label>Selected Items</label>
+          <div class="selected-items">
+            <p class="empty-message">No items selected. Please select items from the menu.</p>
+          </div>
+          <div class="order-total">
+            <strong>Total: $<span>0.00</span></strong>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Orders Section -->
+  <section class="orders-section">
+    <div class="orders-container">
+      <div class="orders-header">
+        <h2>Recent Orders</h2>
+        <p>Track the status of your recent orders and view order history</p>
+      </div>
+      <div class="orders-slider">
+        <button class="orders-btn prev" aria-label="Previous orders">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <div class="orders-track"></div>
+        <button class="orders-btn next" aria-label="Next orders">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Foodie POS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
